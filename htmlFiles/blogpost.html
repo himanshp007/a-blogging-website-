@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-container">
+          <h1 id="mainHeading">Create A New Blogpost</h1>
+          <form onsubmit="handleFormSubmit(event)">
+            <div class="mb-3">
+              <label for="title" class="form-label">Blog Title:</label>
+              <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Blog Author:</label>
+              <input type="text" class="form-control" name="author" id="author">
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Blog Content:</label>
+              <textarea class="form-control" name="content" id="content" rows="5" placeholder="Write your blog here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post Blog</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container">
+          <!-- Blog cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
